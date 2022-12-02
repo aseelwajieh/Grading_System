@@ -1,44 +1,43 @@
 package com.example.gradingsystem
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.os.Build
 import android.view.View
 import android.widget.*
-
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import com.example.gradingsystem.GPADialog
+import com.example.gradingsystem.R
+import android.view.MenuInflater as MenuInflater1
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val rating:TextView = findViewById(R.id.descriptive)
-        var flag : String = "Select your grade range"
-        val spinnerVals : Spinner = findViewById(R.id.rating)
-        var options = arrayOf("Select your grade range","100 - 85","84 - 75","74 - 65","64 - 50","less than 50")
-        spinnerVals.adapter =
-            ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,options)
-        spinnerVals.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                flag = options.get(p2)
-            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                       TODO("Not yet implemented")
-            }
+    }
 
-            }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu to use in the action bar
+        val inflater = menuInflater
+        inflater.inflate(R.menu.app_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
-        val button : Button = findViewById(R.id.gbtn)
-        button.setOnClickListener{
-            when(flag){
-                "100 - 85"-> rating.text = "Rating is: Excellent"
-                "84 - 75"-> rating.text = "Rating is: Very Good"
-                "74 - 65"-> rating.text = "Rating is: Good"
-                "64 - 50"-> rating.text = "Rating is: satisfactory"
-                "less than 50"-> rating.text = "Rating is: Fail"
 
-            }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val fragG = GPADialog()
+        val fragR = RatingDialog()
+
+        when (item.itemId) {
+            R.id.item1 -> Toast.makeText(this, "item 1 selected", Toast.LENGTH_SHORT).show()
+            R.id.subitem1 -> fragG.show(supportFragmentManager,"Calculate GPA")
+            R.id.subitem2 -> fragR.show(supportFragmentManager,"Show Rating")
         }
+        return true;
     }
 
 
+}
 
-    }
+

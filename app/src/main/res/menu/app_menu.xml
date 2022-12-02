@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item1"
+        android:title= " Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/item2"
+        android:title= "Grades"
+        android:icon="@drawable/ic_baseline_app_registration_24"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/subitem1"
+                android:title="Calculate GPA"
+                android:icon="@drawable/ic_baseline_calculate_24"
+                app:showAsAction="ifRoom"/>
+
+            <item
+                android:id="@+id/subitem2"
+
+                android:title="Show Rating"
+                android:icon="@drawable/ic_baseline_grading_24"
+                app:showAsAction="ifRoom"/>
+
+
+        </menu>
+
+    </item>
+
+</menu>

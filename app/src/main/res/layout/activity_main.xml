@@ -6,71 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="215dp"
+        android:layout_height="293dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@drawable/app_logo" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="167dp"
-        android:text="Grading System"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/rating"
-        android:layout_width="367dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="1dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Select Your Grade:"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/rating"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/gbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="159dp"
-        android:text="Show Descriptive Rating"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rating" />
-
-    <TextView
-        android:id="@+id/descriptive"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="118dp"
-        android:layout_marginBottom="175dp"
-        android:text="Rating will be shown here"
+        android:layout_width="351dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="216dp"
+        android:fontFamily="casual"
+        android:foregroundTint="#CC2323"
+        android:text="Welcome To PSUT's Grading system"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="#202557"
+        android:textSize="34sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gbtn" />
-
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
