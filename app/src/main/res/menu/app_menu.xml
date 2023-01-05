@@ -5,28 +5,30 @@
 
     <item
         android:id="@+id/item1"
-        android:title= " Home"
         android:icon="@drawable/ic_baseline_home_24"
-        app:showAsAction="ifRoom"/>
+        android:title=" Home"
+        app:showAsAction="always" />
 
-    <item android:id="@+id/item2"
-        android:title= "Grades"
+
+    <item
+        android:id="@+id/item2"
         android:icon="@drawable/ic_baseline_app_registration_24"
-        app:showAsAction="ifRoom">
+        android:title="Grades"
+        app:showAsAction="always">
 
         <menu>
             <item
                 android:id="@+id/subitem1"
-                android:title="Calculate GPA"
                 android:icon="@drawable/ic_baseline_calculate_24"
-                app:showAsAction="ifRoom"/>
+                android:title="Calculate GPA"
+                app:showAsAction="ifRoom" />
 
             <item
                 android:id="@+id/subitem2"
 
-                android:title="Show Rating"
                 android:icon="@drawable/ic_baseline_grading_24"
-                app:showAsAction="ifRoom"/>
+                android:title="Show Rating"
+                app:showAsAction="ifRoom" />
 
 
         </menu>
@@ -35,24 +37,31 @@
 
     <item
         android:id="@+id/item3"
-        android:title= " Home"
         android:icon="@drawable/ic_baseline_collections_bookmark_24"
-        app:showAsAction="ifRoom">
+        android:title="Courses"
+        app:showAsAction="always">
 
         <menu>
             <item
                 android:id="@+id/subitem3"
-                android:title="Add Courses and their Grades"
                 android:icon="@drawable/ic_baseline_add_24"
-                app:showAsAction="ifRoom"/>
+                android:title="Add Courses and their Grades"
+                app:showAsAction="ifRoom" />
 
             <item
                 android:id="@+id/subitem4"
-                android:title="Courses Registeration Dates"
                 android:icon="@drawable/ic_baseline_access_time_24"
-                app:showAsAction="ifRoom"/>
+                android:title="Courses Registeration Dates"
+                app:showAsAction="ifRoom" />
         </menu>
     </item>
+
+    <item
+        android:id="@+id/item4"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Logout"
+        app:showAsAction="always" />
+
 
 
 </menu>

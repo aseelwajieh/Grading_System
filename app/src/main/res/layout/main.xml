@@ -30,7 +30,7 @@
         android:layout_marginBottom="216dp"
         android:fontFamily="casual"
         android:foregroundTint="#CC2323"
-        android:text="Welcome To PSUT's Grading system"
+        android:text="Welcome To PSUT's Regnew System"
         android:textAlignment="center"
         android:textColor="#202557"
         android:textSize="34sp"

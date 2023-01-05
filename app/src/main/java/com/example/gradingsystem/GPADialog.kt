@@ -27,6 +27,7 @@ class GPADialog : Fragment(R.layout.dialog_gpa) {
         }
 
 
+
     public fun calculate(x : Int , y :Int): Float {
 
         return y.toFloat()/x.toFloat() ;

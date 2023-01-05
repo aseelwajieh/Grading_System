@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val main = Main()
+        val main = LoginPage()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.FLfragment, main)
@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         val fragG = GPADialog()
         val fragR = RatingDialog()
         val content = MyFrag()
+        val login = LoginPage()
 
         when (item.itemId) {
             R.id.item1 -> supportFragmentManager.beginTransaction().apply {
@@ -53,6 +54,11 @@ class MainActivity : AppCompatActivity() {
 
             R.id.subitem3 -> supportFragmentManager.beginTransaction().apply {
                 replace(R.id.FLfragment, content)
+                commit()
+            }
+
+            R.id.item4 -> supportFragmentManager.beginTransaction().apply {
+                replace(R.id.FLfragment, login)
                 commit()
             }
         }
@@ -99,43 +105,38 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    //@SuppressLint("Range")
-    fun ShowGrades(name: String,grades: TextView) {
+    fun ShowGrades(name: String, grades: TextView) {
         // Retrieve student records
         val URL = "content://com.example.gradingsystem.Courses"
         val students = Uri.parse(URL)
-        val mProjection: Array<String> = arrayOf( Courses.NAME, Courses.GRADE)
-            // Courses._ID,
-       // val projection = arrayOf("column1", "column2")
+        val mProjection: Array<String> = arrayOf(Courses.NAME, Courses.GRADE)
         val selection = "NAME = ?"
         val selectionArgs = arrayOf(name)
-        //val sortOrder = "column2 DESC"
-
-
-        //\  val c = contentResolver!!.query(students,null,null,null,"name"
-        var c = contentResolver.query(students, mProjection, selection, selectionArgs,null)
-        //var c = contentResolver.query(students, null, null, null, null)
-
-        //val //c = managedQuery(students, null, null, null, "name")
+        var c = contentResolver.query(students, mProjection, selection, selectionArgs, null)
         if (c != null && name != "") {
+
             if (c.moveToFirst()) {
                 do {
-                    //Toast.makeText(this , c.getString(c.getColumnIndex(Courses.NAME)) + "," + c.getString(c.getColumnIndex(Courses.GRADE)) , Toast.LENGTH_SHORT).show()
-
-                    grades.text =  c.getString(c.getColumnIndex(Courses.NAME)) + ", " + c.getString(c.getColumnIndex(Courses.GRADE))
-                   // grades.text =  c.getString(c.getColumnIndex(Courses.NAME)) + ", " + c.getString(c.getColumnIndex(Courses.GRADE))+"\n"
-
-//                    grades.text = text
+                    grades.text = c.getString(c.getColumnIndex(Courses.NAME)) + ", " + c.getString(
+                        c.getColumnIndex(Courses.GRADE)
+                    )
 
 
-
-            } while (c.moveToNext())
-        }
-    }
-        else{
+                } while (c.moveToNext())
+            }
+        } else {
             grades.text = "No Course has been entered"
         }
-}
+    }
+
+    fun Login() {
+        val login = Main()
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.FLfragment, login)
+            commit()
+
+        }
+    }
 }
 
 

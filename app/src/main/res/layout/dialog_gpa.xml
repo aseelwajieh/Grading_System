@@ -11,12 +11,13 @@
         android:id="@+id/textView2"
         android:layout_width="228dp"
         android:layout_height="32dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Calculate your GPA"
         android:textAlignment="center"
-        android:textColor="#4A7073"
+        android:textColor="#464E7A"
         android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,16 +27,14 @@
         android:id="@+id/result"
         android:layout_width="244dp"
         android:layout_height="41dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginBottom="37dp"
         android:text="Your GPA is:"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/calc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grades" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/course"
@@ -65,14 +64,14 @@
         android:id="@+id/calc"
         android:layout_width="137dp"
         android:layout_height="36dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginBottom="256dp"
         android:background="#E91E63"
         android:backgroundTint="#EC9797"
         android:text="Calculate"
         app:iconTint="#B63131"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result"
         app:rippleColor="#934141"
         app:strokeColor="#671515" />
 
@@ -80,7 +79,7 @@
         android:id="@+id/grades"
         android:layout_width="333dp"
         android:layout_height="72dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="80dp"
         android:ems="10"
         android:hint="Enter the summation of your grades:"
         android:inputType="number"
@@ -89,8 +88,6 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/course" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
