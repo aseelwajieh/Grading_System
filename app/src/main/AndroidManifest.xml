@@ -25,6 +25,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <provider
+            android:authorities="com.example.gradingsystem.Courses"
+            android:name="Courses"
+            android:exported = "true"/>
+
+
+
+
     </application>
 
 </manifest>

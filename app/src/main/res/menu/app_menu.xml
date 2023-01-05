@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
         android:id="@+id/item1"
         android:title= " Home"
@@ -31,5 +32,27 @@
         </menu>
 
     </item>
+
+    <item
+        android:id="@+id/item3"
+        android:title= " Home"
+        android:icon="@drawable/ic_baseline_collections_bookmark_24"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/subitem3"
+                android:title="Add Courses and their Grades"
+                android:icon="@drawable/ic_baseline_add_24"
+                app:showAsAction="ifRoom"/>
+
+            <item
+                android:id="@+id/subitem4"
+                android:title="Courses Registeration Dates"
+                android:icon="@drawable/ic_baseline_access_time_24"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+
 
 </menu>
