@@ -26,7 +26,9 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="110dp"
+        android:fontFamily="sans-serif-black"
         android:text="12 / 01 / 2023  2 : 00 pm       12 / 01 / 2023  5 : 00 pm"
+        android:textColor="#748CAB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -36,7 +38,9 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
         android:text="15 / 01 / 2023  2 : 00 pm       15 / 01 / 2023  5 : 00 pm"
+        android:textColor="#748CAB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -47,7 +51,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="145dp"
+        android:fontFamily="sans-serif-black"
         android:text="16 / 01 / 2023  2 : 00 pm        16/ 01 / 2023  5 : 00 pm"
+        android:textColor="#748CAB"
         app:layout_constraintBottom_toTopOf="@+id/OKBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
@@ -59,7 +65,9 @@
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
         android:text="13 / 01 / 2023  2 : 00 pm       13 / 01 / 2023  5 : 00 pm"
+        android:textColor="#748CAB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -69,7 +77,9 @@
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
         android:text="14 / 01 / 2023  2 : 00 pm       14 / 01 / 2023  5 : 00 pm"
+        android:textColor="#748CAB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -80,7 +90,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="End Date"
+        android:textColor="#0D1321"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -112,7 +124,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Start Date"
+        android:textColor="#0D1321"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             val uri = contentResolver.insert(
                 Courses.CONTENT_URI, values
             )
-            Toast.makeText(baseContext, uri.toString(), Toast.LENGTH_LONG).show()
+            txt.text = " Course has been added successfully"
 
         }
     }
@@ -114,6 +114,8 @@ class MainActivity : AppCompatActivity() {
             val uri = contentResolver.update(
                 Courses.CONTENT_URI, values, "NAME = ?", arrayOf(name)
             )
+            txt.text = " Grade has been updated successfully"
+
 
         }
     }
@@ -126,6 +128,9 @@ class MainActivity : AppCompatActivity() {
             val uri = contentResolver.delete(
                 Courses.CONTENT_URI, "NAME = ?", arrayOf(name)
             )
+            txt.text = " Course has been deleted successfully"
+
+
 
         }
     }
