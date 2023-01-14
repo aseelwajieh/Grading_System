@@ -6,20 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+    <FrameLayout
+        android:id="@+id/FLfragment"
+        android:name="com.example.GradingSystem.FirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_abslouteX="0dp"
+        />
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="215dp"
-        android:layout_height="293dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437"
-        app:srcCompat="@drawable/app_logo" />
+    android:id="@+id/imageView"
+    android:layout_width="215dp"
+    android:layout_height="293dp"
+    android:layout_marginStart="98dp"
+    android:layout_marginTop="68dp"
+    android:layout_marginEnd="98dp"
+    android:layout_marginBottom="64dp"
+    app:layout_constraintBottom_toTopOf="@+id/textView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.437"
+    app:srcCompat="@drawable/app_logo" />
 
     <TextView
         android:id="@+id/textView"

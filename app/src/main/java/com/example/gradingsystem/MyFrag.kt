@@ -16,19 +16,20 @@ class MyFrag : Fragment(R.layout.frag_my) {
         val name : EditText = view.findViewById(R.id.name)
         val grade : EditText = view.findViewById(R.id.grade)
         val grades : TextView = view.findViewById(R.id.data)
+        val txt : TextView = view.findViewById(R.id.feedback)
 
         insert.setOnClickListener() {
-            call.InsertCourse(name.text.toString(),grade.text.toString()) }
+            call.InsertCourse(name.text.toString(),grade.text.toString(),txt) }
 
 
         update.setOnClickListener() {
-            call.UpdateCourse(name.text.toString(),grade.text.toString()) }
+            call.UpdateCourse(name.text.toString(),grade.text.toString(),txt) }
 
         delete.setOnClickListener() {
-            call.DeleteCourse(name.text.toString(),grade.text.toString()) }
+            call.DeleteCourse(name.text.toString(),txt) }
 
         show.setOnClickListener(){
-            call.ShowGrades(name.text.toString(),grades)
+            call.ShowGrades(name.text.toString(),grades,txt)
         }
 
 
